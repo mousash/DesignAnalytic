@@ -1,0 +1,16 @@
+PODS:
+  - Smartlook (1.7.5)
+
+DEPENDENCIES:
+  - Smartlook
+
+SPEC REPOS:
+  trunk:
+    - Smartlook
+
+SPEC CHECKSUMS:
+  Smartlook: 18caeea5f8debc42b17d20dde5a7967bdbc8dcdf
+
+PODFILE CHECKSUM: f6a6f87aee27c06999c653c4f2207ae105de62d3
+
+COCOAPODS: 1.9.1

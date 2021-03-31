@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController" customModule="Design_Analytic" customModuleProvider="target">
+            <connections>
+                <outlet property="ageView" destination="5Gc-l1-eZp" id="nnz-ae-0kO"/>
+                <outlet property="femaleButton" destination="KPR-lE-fKT" id="6bD-dU-Bnz"/>
+                <outlet property="locationView" destination="g7l-zA-2kv" id="xol-qK-k5D"/>
+                <outlet property="maleButton" destination="NMR-VB-NN6" id="Jml-4Y-cb8"/>
+                <outlet property="nameView" destination="WDH-5s-4lX" id="6Tj-iS-9Qm"/>
+                <outlet property="otherGenderButton" destination="QDR-cv-sob" id="edl-yX-qPJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeLabel" destination="xsV-ys-DAk" id="tlw-Kr-9Ws"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsV-ys-DAk">
+                    <rect key="frame" x="16" y="76" width="382" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <color key="textColor" name="AccentColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dTN-H2-aAP">
+                    <rect key="frame" x="16" y="108" width="382" height="244"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDH-5s-4lX" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="GxL-ds-6Cl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-zA-2kv" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="92" width="382" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="aFu-7c-8Rl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-l1-eZp" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="184" width="382" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="PL7-DD-9j0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-Xw-lPa">
+                    <rect key="frame" x="32" y="368" width="350" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-VB-NN6" customClass="CustomSelectingButton" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="10" width="106" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="genderButtonAction:" destination="-1" eventType="touchUpInside" id="68L-3U-9Gm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-lE-fKT" customClass="CustomSelectingButton" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="122" y="10" width="106" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="genderButtonAction:" destination="-1" eventType="touchUpInside" id="0uA-7l-OJO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-cv-sob" customClass="CustomSelectingButton" customModule="Design_Analytic" customModuleProvider="target">
+                            <rect key="frame" x="244" y="10" width="106" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="genderButtonAction:" destination="-1" eventType="touchUpInside" id="iTf-ck-Lts"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Hcm-9d-Z6Y"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-jC-vt2" customClass="CustomSubmitButton" customModule="Design_Analytic" customModuleProvider="target">
+                    <rect key="frame" x="32" y="482" width="350" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Zxf-ua-mpQ"/>
+                    </constraints>
+                    <state key="normal" title="Next"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="a9o-Xw-lPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="0YY-AN-BN6"/>
+                <constraint firstItem="a9o-Xw-lPa" firstAttribute="top" secondItem="dTN-H2-aAP" secondAttribute="bottom" constant="16" id="3un-Of-gPf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iSg-jC-vt2" secondAttribute="trailing" constant="32" id="MxG-Gn-qOR"/>
+                <constraint firstItem="dTN-H2-aAP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NJk-fd-fLw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dTN-H2-aAP" secondAttribute="trailing" constant="16" id="Obj-9M-HsL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xsV-ys-DAk" secondAttribute="trailing" constant="16" id="PSE-on-35W"/>
+                <constraint firstItem="iSg-jC-vt2" firstAttribute="top" secondItem="a9o-Xw-lPa" secondAttribute="bottom" constant="64" id="XvQ-G7-7aK"/>
+                <constraint firstItem="xsV-ys-DAk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Zs9-b9-Tvr"/>
+                <constraint firstItem="xsV-ys-DAk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="bzw-ru-5g1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a9o-Xw-lPa" secondAttribute="trailing" constant="32" id="eK3-ox-Qu3"/>
+                <constraint firstItem="iSg-jC-vt2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="x4M-Xn-eam"/>
+                <constraint firstItem="dTN-H2-aAP" firstAttribute="top" secondItem="xsV-ys-DAk" secondAttribute="bottom" constant="32" id="yPu-VV-Srf"/>
+            </constraints>
+            <point key="canvasLocation" x="20" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
