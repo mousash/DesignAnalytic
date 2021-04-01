@@ -34,8 +34,9 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func startButtonAction(_ sender: Any) {
         let vc = InformationViewController(nibName: "InformationViewController", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        self.present(navVC, animated: true, completion: nil)
     }
     
 }

@@ -94,6 +94,9 @@
                         <constraint firstAttribute="height" constant="45" id="Zxf-ua-mpQ"/>
                     </constraints>
                     <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="r2F-fM-goA"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

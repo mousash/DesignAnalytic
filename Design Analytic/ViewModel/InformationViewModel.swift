@@ -16,6 +16,7 @@ class InformationViewModel {
     
     init() {
         setDefaults()
+        setupPageStep()
     }
     
     private func setDefaults() {
@@ -31,4 +32,9 @@ class InformationViewModel {
         guard let location = UserDefaults.standard.string(forKey: "Location") else {return}
         self.location = location
     }
+    
+    private func setupPageStep() {
+        UserDefaults.standard.setValue(PageStep.UserInformation.rawValue, forKey: "PageStep")
+    }
+    
 }

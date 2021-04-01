@@ -19,15 +19,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let welcomeVC = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
-        window?.rootViewController = welcomeVC
+        let vc = setupInitView()
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
     }
 
-    private func setupInitView() {
-       
-        
+    private func setupInitView() -> UIViewController {
+        let pageStep = UserDefaults.standard.string(forKey: "PageStep")
+        switch pageStep {
+        case PageStep.UserInformation.rawValue :
+            let infoVC = InformationViewController(nibName: "InformationViewController", bundle: nil)
+            return UINavigationController(rootViewController: infoVC)
+        case PageStep.AddItem.rawValue :
+            let addItemVC = AddItemViewController(nibName: "AddItemViewController", bundle: nil)
+            return UINavigationController(rootViewController: addItemVC)
+        default:
+            return WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

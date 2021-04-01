@@ -5,6 +5,8 @@ target 'Design Analytic' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Smartlook'
+  pod 'Firebase/Analytics'
+  pod 'IQKeyboardManagerSwift'
   # Pods for Design Analytic
 
 end

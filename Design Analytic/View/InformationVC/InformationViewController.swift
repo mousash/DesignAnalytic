@@ -55,6 +55,25 @@ class InformationViewController: UIViewController {
         sender.isChecked = true
         viewModel.gender = sender.titleLabel?.text ?? ""
     }
+    
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        if nameView.textFieldInput.text! == "" || ageView.textFieldInput.text! == "" || locationView.textFieldInput.text! == "" {
+            let alertController = UIAlertController(title: "Something is wrong", message: "please fill out all the informations", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in }
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        saveUserInformation()
+        let vc = AddItemViewController(nibName: "AddItemViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func saveUserInformation() {
+        UserDefaults.standard.setValue(nameView.textFieldInput.text!, forKey: "Name")
+        UserDefaults.standard.setValue(ageView.textFieldInput.text!, forKey: "Age")
+        UserDefaults.standard.setValue(locationView.textFieldInput.text!, forKey: "Location")
+    }
 }
 
 extension InformationViewController: UITextFieldDelegate {
