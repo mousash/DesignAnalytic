@@ -19,12 +19,12 @@ class AddItemViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Add an item"
-        setuptableView()
+        setupTableView()
         setTitleText()
         setupAddButton()
     }
 
-    private func setuptableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -60,6 +60,8 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        let vc = SelectColorsViewController(nibName: "SelectColorsViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

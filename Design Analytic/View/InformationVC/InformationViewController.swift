@@ -32,7 +32,6 @@ class InformationViewController: UIViewController {
         nameView.textFieldInput.delegate = self
         ageView.textFieldInput.delegate = self
         locationView.textFieldInput.delegate = self
-        
     }
     
     private func setupView() {

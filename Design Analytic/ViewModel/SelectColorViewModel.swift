@@ -10,4 +10,9 @@ import Foundation
 class SelectColorViewModel {
     
     var items = [ColorModel(color: .red, isSelected: false), ColorModel(color: .blue, isSelected: false), ColorModel(color: .green, isSelected: false), ColorModel(color: .yellow, isSelected: false)]
+    
+    init() {
+        UserDefaults.standard.setValue(PageStep.SelectColor.rawValue, forKey: "PageStep")
+    }
+    
 }
