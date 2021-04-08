@@ -18,6 +18,7 @@ class AddItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Add an item"
         setuptableView()
         setTitleText()
         setupAddButton()
