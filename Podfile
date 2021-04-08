@@ -7,6 +7,7 @@ target 'Design Analytic' do
   pod 'Smartlook'
   pod 'Firebase/Analytics'
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftLint'
   # Pods for Design Analytic
 
 end

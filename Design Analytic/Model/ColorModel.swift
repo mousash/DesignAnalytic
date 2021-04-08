@@ -5,4 +5,9 @@
 //  Created by Mousa on 08.04.21.
 //
 
-import Foundation
+import UIKit
+
+struct ColorModel {
+    var color: UIColor
+    var isSelected: Bool
+}

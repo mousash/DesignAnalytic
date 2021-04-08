@@ -22,6 +22,8 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Information"
         setupTextFieldsDelegate()
         setupView()
     }

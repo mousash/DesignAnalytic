@@ -15,6 +15,12 @@
 		943724A42615C6C700A91093 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943724A22615C6C600A91093 /* AddItemViewController.swift */; };
 		943724A52615C6C700A91093 /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943724A32615C6C600A91093 /* AddItemViewController.xib */; };
 		943724A82615C74400A91093 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943724A72615C74400A91093 /* AddItemViewModel.swift */; };
+		943F4130261F518A0084DD9E /* SelectColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F412E261F518A0084DD9E /* SelectColorsViewController.swift */; };
+		943F4131261F518A0084DD9E /* SelectColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943F412F261F518A0084DD9E /* SelectColorsViewController.xib */; };
+		943F4135261F523D0084DD9E /* SelectColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F4133261F523D0084DD9E /* SelectColorCollectionViewCell.swift */; };
+		943F4136261F523D0084DD9E /* SelectColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943F4134261F523D0084DD9E /* SelectColorCollectionViewCell.xib */; };
+		943F413A261F52690084DD9E /* SelectColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F4139261F52690084DD9E /* SelectColorViewModel.swift */; };
+		943F413E261F527D0084DD9E /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F413D261F527D0084DD9E /* ColorModel.swift */; };
 		9452A0E4261391B5008F804E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452A0E3261391B5008F804E /* AppDelegate.swift */; };
 		9452A0E6261391B5008F804E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452A0E5261391B5008F804E /* SceneDelegate.swift */; };
 		9452A0EB261391B5008F804E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9452A0E9261391B5008F804E /* Main.storyboard */; };
@@ -45,6 +51,12 @@
 		943724A22615C6C600A91093 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		943724A32615C6C600A91093 /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
 		943724A72615C74400A91093 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		943F412E261F518A0084DD9E /* SelectColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColorsViewController.swift; sourceTree = "<group>"; };
+		943F412F261F518A0084DD9E /* SelectColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectColorsViewController.xib; sourceTree = "<group>"; };
+		943F4133261F523D0084DD9E /* SelectColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		943F4134261F523D0084DD9E /* SelectColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		943F4139261F52690084DD9E /* SelectColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColorViewModel.swift; sourceTree = "<group>"; };
+		943F413D261F527D0084DD9E /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 		9452A0E0261391B5008F804E /* Design Analytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design Analytic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9452A0E3261391B5008F804E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9452A0E5261391B5008F804E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +123,26 @@
 			path = InformationVC;
 			sourceTree = "<group>";
 		};
+		943F412A261F51580084DD9E /* AddItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				943724A22615C6C600A91093 /* AddItemViewController.swift */,
+				943724A32615C6C600A91093 /* AddItemViewController.xib */,
+			);
+			path = AddItemVC;
+			sourceTree = "<group>";
+		};
+		943F4138261F524A0084DD9E /* SelectColorVC */ = {
+			isa = PBXGroup;
+			children = (
+				943F412E261F518A0084DD9E /* SelectColorsViewController.swift */,
+				943F412F261F518A0084DD9E /* SelectColorsViewController.xib */,
+				943F4133261F523D0084DD9E /* SelectColorCollectionViewCell.swift */,
+				943F4134261F523D0084DD9E /* SelectColorCollectionViewCell.xib */,
+			);
+			path = SelectColorVC;
+			sourceTree = "<group>";
+		};
 		9452A0D7261391B5008F804E = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +188,7 @@
 				94A9AAAA261474AF00A11FF6 /* WelcomeViewModel.swift */,
 				94A9AAB52614754800A11FF6 /* InformationViewModel.swift */,
 				943724A72615C74400A91093 /* AddItemViewModel.swift */,
+				943F4139261F52690084DD9E /* SelectColorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -165,8 +198,8 @@
 			children = (
 				943724AA2615CDD100A91093 /* WelcomVC */,
 				943724AB2615CDDC00A91093 /* InformationVC */,
-				943724A22615C6C600A91093 /* AddItemViewController.swift */,
-				943724A32615C6C600A91093 /* AddItemViewController.xib */,
+				943F412A261F51580084DD9E /* AddItemVC */,
+				943F4138261F524A0084DD9E /* SelectColorVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +209,7 @@
 			children = (
 				9452A10B2613A2CC008F804E /* WelcomeModel.swift */,
 				9437248E2614E06D00A91093 /* PageStep.swift */,
+				943F413D261F527D0084DD9E /* ColorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9452A0F4261391B8008F804E /* Build configuration list for PBXNativeTarget "Design Analytic" */;
 			buildPhases = (
+				943F40F7261F112C0084DD9E /* ShellScript */,
 				48A1887A5F9520ABDC770B17 /* [CP] Check Pods Manifest.lock */,
 				083A6D13A3B9FCE2A2BC7AF0 /* [CP] Prepare Artifacts */,
 				9452A0DC261391B5008F804E /* Sources */,
@@ -207,6 +242,8 @@
 			dependencies = (
 			);
 			name = "Design Analytic";
+			packageProductDependencies = (
+			);
 			productName = "Design Analytic";
 			productReference = 9452A0E0261391B5008F804E /* Design Analytic.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +271,8 @@
 				Base,
 			);
 			mainGroup = 9452A0D7261391B5008F804E;
+			packageReferences = (
+			);
 			productRefGroup = 9452A0E1261391B5008F804E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943F4136261F523D0084DD9E /* SelectColorCollectionViewCell.xib in Resources */,
 				9452A0F0261391B8008F804E /* LaunchScreen.storyboard in Resources */,
 				9452A1092613A0EA008F804E /* WelcomeCollectionViewCell.xib in Resources */,
 				943724932614E32C00A91093 /* GoogleService-Info.plist in Resources */,
@@ -257,6 +297,7 @@
 				94A9AAC726147F1100A11FF6 /* Colors.xcassets in Resources */,
 				943724A52615C6C700A91093 /* AddItemViewController.xib in Resources */,
 				94A9AAA8261473B500A11FF6 /* InformationViewController.xib in Resources */,
+				943F4131261F518A0084DD9E /* SelectColorsViewController.xib in Resources */,
 				94A9AAC42614793E00A11FF6 /* InformationInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +361,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Design Analytic/Pods-Design Analytic-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		943F40F7261F112C0084DD9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,14 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943F413E261F527D0084DD9E /* ColorModel.swift in Sources */,
 				9452A10226139768008F804E /* WelcomeViewController.swift in Sources */,
 				9437248F2614E06D00A91093 /* PageStep.swift in Sources */,
 				942B5BB3261487DB002B27D3 /* CustomSelectingButton.swift in Sources */,
 				9452A1082613A0EA008F804E /* WelcomeCollectionViewCell.swift in Sources */,
+				943F4135261F523D0084DD9E /* SelectColorCollectionViewCell.swift in Sources */,
 				942B5BB02614861A002B27D3 /* Extension+UIView.swift in Sources */,
 				94A9AABD261478D200A11FF6 /* InformationInputView.swift in Sources */,
 				9452A0E4261391B5008F804E /* AppDelegate.swift in Sources */,
 				942B5BB7261490BE002B27D3 /* CustomSubmitButton.swift in Sources */,
+				943F4130261F518A0084DD9E /* SelectColorsViewController.swift in Sources */,
+				943F413A261F52690084DD9E /* SelectColorViewModel.swift in Sources */,
 				94A9AAAB261474AF00A11FF6 /* WelcomeViewModel.swift in Sources */,
 				9452A0E6261391B5008F804E /* SceneDelegate.swift in Sources */,
 				943724A82615C74400A91093 /* AddItemViewModel.swift in Sources */,
