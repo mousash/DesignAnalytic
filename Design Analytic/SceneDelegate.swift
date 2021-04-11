@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let infoVC = InformationViewController(nibName: "InformationViewController", bundle: nil)
             return UINavigationController(rootViewController: infoVC)
         case PageStep.AddItem.rawValue :
-            let addItemVC = AddItemViewController(nibName: "AddItemViewController", bundle: nil)
+            let addItemVC = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
             return UINavigationController(rootViewController: addItemVC)
         default:
             return WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)

@@ -66,7 +66,7 @@ class InformationViewController: UIViewController {
             return
         }
         saveUserInformation()
-        let vc = AddItemViewController(nibName: "AddItemViewController", bundle: nil)
+        let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
         navigationController?.pushViewController(vc, animated: true)
     }
     

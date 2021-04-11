@@ -12,16 +12,29 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var addBarButtonItem = UIBarButtonItem()
-    
     let viewModel = AddItemViewModel()
+    var pageTitle: String?
+    var pageDescription: String?
+    var isEditable: Bool?
+    
+    init(isEditable: Bool, pageTitle: String, pageDescription: String) {
+        super.init(nibName: "AddItemViewController", bundle: nil)
+        title = pageTitle
+        self.isEditable = isEditable
+        self.pageDescription = pageDescription
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Add an item"
         setupTableView()
-        setTitleText()
         setupAddButton()
+        setupEditableTableView()
+        setupPageDescription()
     }
 
     private func setupTableView() {
@@ -29,8 +42,14 @@ class AddItemViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    private func setTitleText() {
-        titleLabel.text = "\(viewModel.getUserName()) try to add a new row to this animal list please"
+    private func setupEditableTableView() {
+        if isEditable ?? false {
+            tableView.isEditing = true
+        }
+    }
+    
+    private func setupPageDescription() {
+        titleLabel.text = "\(viewModel.getUserName()) \(pageDescription ?? "")"
     }
     
     private func setupAddButton() {
@@ -56,7 +75,6 @@ class AddItemViewController: UIViewController {
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
@@ -83,5 +101,17 @@ extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
     
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = viewModel.items[sourceIndexPath.row]
+        viewModel.items.remove(at: sourceIndexPath.row)
+        viewModel.items.insert(movedObject, at: destinationIndexPath.row)
+    }
 }
