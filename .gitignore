@@ -1,0 +1,11 @@
+# Mac OS X Finder
+.DS_Store
+
+# Cocoapods
+Pods/
+
+# Xcode
+xcuserdata/
+project.xcworkspace/
+DerivedData/
+
