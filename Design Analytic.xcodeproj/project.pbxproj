@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				943724922614E32C00A91093 /* GoogleService-Info.plist */,
-				942B5BB2261487DB002B27D3 /* CustomSelectingButton.swift */,
-				942B5BB6261490BE002B27D3 /* CustomSubmitButton.swift */,
+				942B5BAF2614861A002B27D3 /* Extension+UIView.swift */,
+				94D26A5F262706D700735531 /* Customs */,
 				94A9AAAF261474C600A11FF6 /* Model */,
 				94A9AAAE261474C000A11FF6 /* View */,
 				94A9AAAD261474B500A11FF6 /* ViewModel */,
@@ -181,7 +181,6 @@
 				94A9AAC626147F1100A11FF6 /* Colors.xcassets */,
 				9452A0EE261391B8008F804E /* LaunchScreen.storyboard */,
 				9452A0F1261391B8008F804E /* Info.plist */,
-				942B5BAF2614861A002B27D3 /* Extension+UIView.swift */,
 			);
 			path = "Design Analytic";
 			sourceTree = "<group>";
@@ -226,6 +225,15 @@
 				94D26A59262484F200735531 /* GoBackViewController.xib */,
 			);
 			path = GoBackVC;
+			sourceTree = "<group>";
+		};
+		94D26A5F262706D700735531 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				942B5BB2261487DB002B27D3 /* CustomSelectingButton.swift */,
+				942B5BB6261490BE002B27D3 /* CustomSubmitButton.swift */,
+			);
+			path = Customs;
 			sourceTree = "<group>";
 		};
 		AC6E72FA9071EA881F6BC4A8 /* Frameworks */ = {
