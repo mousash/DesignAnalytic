@@ -7,15 +7,31 @@
 
 import UIKit
 
-class AddItemViewController: UIViewController {
+protocol DataEnteredFromGoBackDelegate: class {
+    func userDidBack()
+}
+
+class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var addBarButtonItem = UIBarButtonItem()
     let viewModel = AddItemViewModel()
-    var pageTitle: String?
-    var pageDescription: String?
-    var isEditable: Bool?
+    var pageTitle: String? {
+        didSet {
+            title = pageTitle
+        }
+    }
+    var pageDescription: String? {
+        didSet {
+            titleLabel.text = "\(viewModel.getUserName()) \(pageDescription ?? "")"
+        }
+    }
+    var isEditable: Bool? {
+        didSet {
+            tableView.isEditing = isEditable ?? false
+        }
+    }
     
     init(isEditable: Bool, pageTitle: String, pageDescription: String) {
         super.init(nibName: "AddItemViewController", bundle: nil)
@@ -36,7 +52,7 @@ class AddItemViewController: UIViewController {
         setupEditableTableView()
         setupPageDescription()
     }
-
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -78,8 +94,15 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        let vc = SelectColorsViewController(nibName: "SelectColorsViewController", bundle: nil)
+        let vc = GoBackViewController(nibName: "GoBackViewController", bundle: nil)
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func userDidBack() {
+        isEditable = true
+        pageTitle = "Move it"
+        pageDescription = "Move the Parrot to the top of the list"
     }
     
 }

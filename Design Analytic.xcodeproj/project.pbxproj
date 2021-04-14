@@ -38,6 +38,8 @@
 		94A9AABD261478D200A11FF6 /* InformationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9AABC261478D200A11FF6 /* InformationInputView.swift */; };
 		94A9AAC42614793E00A11FF6 /* InformationInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A9AAC32614793E00A11FF6 /* InformationInputView.xib */; };
 		94A9AAC726147F1100A11FF6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A9AAC626147F1100A11FF6 /* Colors.xcassets */; };
+		94D26A5A262484F200735531 /* GoBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D26A58262484F200735531 /* GoBackViewController.swift */; };
+		94D26A5B262484F200735531 /* GoBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D26A59262484F200735531 /* GoBackViewController.xib */; };
 		CED15E99673C74725F5422D6 /* Pods_Design_Analytic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697B3CE862B9CAF772227DB6 /* Pods_Design_Analytic.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		94A9AABC261478D200A11FF6 /* InformationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationInputView.swift; sourceTree = "<group>"; };
 		94A9AAC32614793E00A11FF6 /* InformationInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationInputView.xib; sourceTree = "<group>"; };
 		94A9AAC626147F1100A11FF6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		94D26A58262484F200735531 /* GoBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBackViewController.swift; sourceTree = "<group>"; };
+		94D26A59262484F200735531 /* GoBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoBackViewController.xib; sourceTree = "<group>"; };
 		B5FCC69BCA546D964A81BE39 /* Pods-Design Analytic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Design Analytic.release.xcconfig"; path = "Target Support Files/Pods-Design Analytic/Pods-Design Analytic.release.xcconfig"; sourceTree = "<group>"; };
 		DFA3D6B6497B7E2FBF0A11A7 /* Pods-Design Analytic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Design Analytic.debug.xcconfig"; path = "Target Support Files/Pods-Design Analytic/Pods-Design Analytic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,8 +202,9 @@
 			children = (
 				943724AA2615CDD100A91093 /* WelcomVC */,
 				943724AB2615CDDC00A91093 /* InformationVC */,
-				943F412A261F51580084DD9E /* AddItemVC */,
 				943F4138261F524A0084DD9E /* SelectColorVC */,
+				943F412A261F51580084DD9E /* AddItemVC */,
+				94D26A5D262488C500735531 /* GoBackVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +217,15 @@
 				943F413D261F527D0084DD9E /* ColorModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		94D26A5D262488C500735531 /* GoBackVC */ = {
+			isa = PBXGroup;
+			children = (
+				94D26A58262484F200735531 /* GoBackViewController.swift */,
+				94D26A59262484F200735531 /* GoBackViewController.xib */,
+			);
+			path = GoBackVC;
 			sourceTree = "<group>";
 		};
 		AC6E72FA9071EA881F6BC4A8 /* Frameworks */ = {
@@ -294,6 +308,7 @@
 				9452A10326139768008F804E /* WelcomeViewController.xib in Resources */,
 				9452A0ED261391B8008F804E /* Assets.xcassets in Resources */,
 				9452A0EB261391B5008F804E /* Main.storyboard in Resources */,
+				94D26A5B262484F200735531 /* GoBackViewController.xib in Resources */,
 				94A9AAC726147F1100A11FF6 /* Colors.xcassets in Resources */,
 				943724A52615C6C700A91093 /* AddItemViewController.xib in Resources */,
 				94A9AAA8261473B500A11FF6 /* InformationViewController.xib in Resources */,
@@ -396,6 +411,7 @@
 				9452A0E4261391B5008F804E /* AppDelegate.swift in Sources */,
 				942B5BB7261490BE002B27D3 /* CustomSubmitButton.swift in Sources */,
 				943F4130261F518A0084DD9E /* SelectColorsViewController.swift in Sources */,
+				94D26A5A262484F200735531 /* GoBackViewController.swift in Sources */,
 				943F413A261F52690084DD9E /* SelectColorViewModel.swift in Sources */,
 				94A9AAAB261474AF00A11FF6 /* WelcomeViewModel.swift in Sources */,
 				9452A0E6261391B5008F804E /* SceneDelegate.swift in Sources */,

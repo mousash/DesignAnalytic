@@ -66,14 +66,18 @@ class InformationViewController: UIViewController {
             return
         }
         saveUserInformation()
-        let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
-        navigationController?.pushViewController(vc, animated: true)
+        goToNextVC()
     }
     
     private func saveUserInformation() {
         UserDefaults.standard.setValue(nameView.textFieldInput.text!, forKey: "Name")
         UserDefaults.standard.setValue(ageView.textFieldInput.text!, forKey: "Age")
         UserDefaults.standard.setValue(locationView.textFieldInput.text!, forKey: "Location")
+    }
+    
+    private func goToNextVC() {
+        let vc = SelectColorsViewController(nibName: "SelectColorsViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

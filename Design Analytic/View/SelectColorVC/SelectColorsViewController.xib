@@ -34,6 +34,9 @@
                         <constraint firstAttribute="height" constant="45" id="oVZ-Ya-EpB"/>
                     </constraints>
                     <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ehz-bh-TO4"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-y4-oVT">
                     <rect key="frame" x="0.0" y="108" width="414" height="693"/>

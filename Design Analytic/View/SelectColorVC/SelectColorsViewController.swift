@@ -32,6 +32,11 @@ class SelectColorsViewController: UIViewController {
         titleLabel.text = "Please select two colors from below"
     }
 
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension SelectColorsViewController: UICollectionViewDelegate,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
