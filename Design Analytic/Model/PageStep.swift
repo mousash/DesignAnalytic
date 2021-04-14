@@ -12,4 +12,5 @@ enum PageStep: String {
     case UserInformation = "UserInformation"
     case AddItem = "AddItem"
     case SelectColor = "SelectColor"
+    case Last = "Last"
 }

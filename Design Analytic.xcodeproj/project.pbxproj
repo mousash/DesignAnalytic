@@ -31,6 +31,10 @@
 		9452A1082613A0EA008F804E /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452A1062613A0EA008F804E /* WelcomeCollectionViewCell.swift */; };
 		9452A1092613A0EA008F804E /* WelcomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9452A1072613A0EA008F804E /* WelcomeCollectionViewCell.xib */; };
 		9452A10C2613A2CC008F804E /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452A10B2613A2CC008F804E /* WelcomeModel.swift */; };
+		9484E3B5262747900089ECE8 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9484E3B3262747900089ECE8 /* LastViewController.swift */; };
+		9484E3B6262747900089ECE8 /* LastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9484E3B4262747900089ECE8 /* LastViewController.xib */; };
+		9484E3BC262749DF0089ECE8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9484E3BB262749DF0089ECE8 /* UIViewController+Alert.swift */; };
+		9484E3C026274AAA0089ECE8 /* LastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9484E3BF26274AAA0089ECE8 /* LastViewModel.swift */; };
 		94A9AAA7261473B500A11FF6 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9AAA5261473B500A11FF6 /* InformationViewController.swift */; };
 		94A9AAA8261473B500A11FF6 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A9AAA6261473B500A11FF6 /* InformationViewController.xib */; };
 		94A9AAAB261474AF00A11FF6 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9AAAA261474AF00A11FF6 /* WelcomeViewModel.swift */; };
@@ -71,6 +75,10 @@
 		9452A1062613A0EA008F804E /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9452A1072613A0EA008F804E /* WelcomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		9452A10B2613A2CC008F804E /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		9484E3B3262747900089ECE8 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
+		9484E3B4262747900089ECE8 /* LastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastViewController.xib; sourceTree = "<group>"; };
+		9484E3BB262749DF0089ECE8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		9484E3BF26274AAA0089ECE8 /* LastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewModel.swift; sourceTree = "<group>"; };
 		94A9AAA5261473B500A11FF6 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		94A9AAA6261473B500A11FF6 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		94A9AAAA261474AF00A11FF6 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 			children = (
 				943724922614E32C00A91093 /* GoogleService-Info.plist */,
 				942B5BAF2614861A002B27D3 /* Extension+UIView.swift */,
+				9484E3BB262749DF0089ECE8 /* UIViewController+Alert.swift */,
 				94D26A5F262706D700735531 /* Customs */,
 				94A9AAAF261474C600A11FF6 /* Model */,
 				94A9AAAE261474C000A11FF6 /* View */,
@@ -185,6 +194,15 @@
 			path = "Design Analytic";
 			sourceTree = "<group>";
 		};
+		9484E3B82627481F0089ECE8 /* LastVC */ = {
+			isa = PBXGroup;
+			children = (
+				9484E3B3262747900089ECE8 /* LastViewController.swift */,
+				9484E3B4262747900089ECE8 /* LastViewController.xib */,
+			);
+			path = LastVC;
+			sourceTree = "<group>";
+		};
 		94A9AAAD261474B500A11FF6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +210,7 @@
 				94A9AAB52614754800A11FF6 /* InformationViewModel.swift */,
 				943724A72615C74400A91093 /* AddItemViewModel.swift */,
 				943F4139261F52690084DD9E /* SelectColorViewModel.swift */,
+				9484E3BF26274AAA0089ECE8 /* LastViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,6 +223,7 @@
 				943F4138261F524A0084DD9E /* SelectColorVC */,
 				943F412A261F51580084DD9E /* AddItemVC */,
 				94D26A5D262488C500735531 /* GoBackVC */,
+				9484E3B82627481F0089ECE8 /* LastVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +339,7 @@
 				94D26A5B262484F200735531 /* GoBackViewController.xib in Resources */,
 				94A9AAC726147F1100A11FF6 /* Colors.xcassets in Resources */,
 				943724A52615C6C700A91093 /* AddItemViewController.xib in Resources */,
+				9484E3B6262747900089ECE8 /* LastViewController.xib in Resources */,
 				94A9AAA8261473B500A11FF6 /* InformationViewController.xib in Resources */,
 				943F4131261F518A0084DD9E /* SelectColorsViewController.xib in Resources */,
 				94A9AAC42614793E00A11FF6 /* InformationInputView.xib in Resources */,
@@ -409,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943F413E261F527D0084DD9E /* ColorModel.swift in Sources */,
+				9484E3B5262747900089ECE8 /* LastViewController.swift in Sources */,
 				9452A10226139768008F804E /* WelcomeViewController.swift in Sources */,
 				9437248F2614E06D00A91093 /* PageStep.swift in Sources */,
 				942B5BB3261487DB002B27D3 /* CustomSelectingButton.swift in Sources */,
@@ -418,10 +440,12 @@
 				94A9AABD261478D200A11FF6 /* InformationInputView.swift in Sources */,
 				9452A0E4261391B5008F804E /* AppDelegate.swift in Sources */,
 				942B5BB7261490BE002B27D3 /* CustomSubmitButton.swift in Sources */,
+				9484E3C026274AAA0089ECE8 /* LastViewModel.swift in Sources */,
 				943F4130261F518A0084DD9E /* SelectColorsViewController.swift in Sources */,
 				94D26A5A262484F200735531 /* GoBackViewController.swift in Sources */,
 				943F413A261F52690084DD9E /* SelectColorViewModel.swift in Sources */,
 				94A9AAAB261474AF00A11FF6 /* WelcomeViewModel.swift in Sources */,
+				9484E3BC262749DF0089ECE8 /* UIViewController+Alert.swift in Sources */,
 				9452A0E6261391B5008F804E /* SceneDelegate.swift in Sources */,
 				943724A82615C74400A91093 /* AddItemViewModel.swift in Sources */,
 				9452A10C2613A2CC008F804E /* WelcomeModel.swift in Sources */,

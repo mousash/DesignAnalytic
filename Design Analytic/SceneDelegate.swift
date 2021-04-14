@@ -37,6 +37,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case PageStep.AddItem.rawValue :
             let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
             return UINavigationController(rootViewController: vc)
+        case PageStep.Last.rawValue :
+            let vc = LastViewController(nibName: "LastViewController", bundle: nil)
+            return UINavigationController(rootViewController: vc)
         default:
             return WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
         }

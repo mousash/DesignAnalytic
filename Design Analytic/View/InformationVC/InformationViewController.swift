@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InformationViewController: UIViewController {
+class InformationViewController: UIViewController, Alert {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var nameView: InformationInputView!
@@ -59,11 +59,8 @@ class InformationViewController: UIViewController {
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
         if nameView.textFieldInput.text! == "" || ageView.textFieldInput.text! == "" || locationView.textFieldInput.text! == "" {
-            let alertController = UIAlertController(title: "Something is wrong", message: "please fill out all the informations", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in }
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-            return
+                setAlert(title: "Something is wrong", message: "please fill out all the informations")
+                return
         }
         saveUserInformation()
         goToNextVC()

@@ -11,7 +11,7 @@ protocol DataEnteredFromGoBackDelegate: class {
     func userDidBack()
 }
 
-class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate {
+class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Alert {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -81,22 +81,21 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate {
         }
         
         if viewModel.getItemsToBeSeen() == 4 {
-            let alertController = UIAlertController(title: "Perfect", message: "OK, now go to the next page", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in }
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+            setAlert(title: "Perfect", message: "OK, now go to the next page")
         }else {
-            let alertController = UIAlertController(title: "hmm", message: "Looks like you want to know about animal names 😃, I think that's enough", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in }
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+            setAlert(title: "hmm", message: "Looks like you want to know about animal names 😃, I think that's enough")
         }
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        let vc = GoBackViewController(nibName: "GoBackViewController", bundle: nil)
-        vc.delegate = self
-        navigationController?.pushViewController(vc, animated: true)
+        if isEditable ?? false {
+            let vc = LastViewController(nibName: "LastViewController", bundle: nil)
+            navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = GoBackViewController(nibName: "GoBackViewController", bundle: nil)
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func userDidBack() {
