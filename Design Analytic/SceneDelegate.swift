@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil) //setupInitView()
+        let vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)//setupInitView()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
@@ -29,11 +29,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let pageStep = UserDefaults.standard.string(forKey: "PageStep")
         switch pageStep {
         case PageStep.UserInformation.rawValue :
-            let infoVC = InformationViewController(nibName: "InformationViewController", bundle: nil)
-            return UINavigationController(rootViewController: infoVC)
+            let vc = InformationViewController(nibName: "InformationViewController", bundle: nil)
+            return UINavigationController(rootViewController: vc)
+        case PageStep.SelectColor.rawValue :
+            let vc = SelectColorsViewController(nibName: "SelectColorsViewController", bundle: nil)
+            return UINavigationController(rootViewController: vc)
         case PageStep.AddItem.rawValue :
-            let addItemVC = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
-            return UINavigationController(rootViewController: addItemVC)
+            let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
+            return UINavigationController(rootViewController: vc)
         default:
             return WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
         }

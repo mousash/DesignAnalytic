@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Design_Analytic" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="noA-xU-OY3" id="QwX-2J-r6v"/>
+                <outlet property="skipButton" destination="KmL-Ik-Rgn" id="Nz4-kR-U1s"/>
                 <outlet property="startButton" destination="Ref-a4-Ij0" id="OSM-I2-93b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

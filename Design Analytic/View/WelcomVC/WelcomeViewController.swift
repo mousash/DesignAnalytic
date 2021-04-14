@@ -11,6 +11,7 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     var viewModel = WelcomeViewModel()
     
@@ -28,8 +29,8 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func skipButtonAction(_ sender: Any) {
-        collectionView.scrollToItem(at: IndexPath(item: 3, section: 0), at: .centeredHorizontally, animated: true)
-        startButton.isHidden = false
+        collectionView.scrollToItem(at: IndexPath(item: 2, section: 0), at: .centeredHorizontally, animated: true)
+        toggleButtons(isStart: false)
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
@@ -39,6 +40,10 @@ class WelcomeViewController: UIViewController {
         self.present(navVC, animated: true, completion: nil)
     }
     
+    private func toggleButtons(isStart: Bool) {
+        startButton.isHidden = isStart
+        skipButton.isHidden = !isStart
+    }
 }
 
 extension WelcomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -64,9 +69,9 @@ extension WelcomeViewController: UICollectionViewDataSource, UICollectionViewDel
         for cell in collectionView.visibleCells {
             let indexPath = collectionView.indexPath(for: cell)
             if indexPath!.row == viewModel.items.count - 1 {
-                startButton.isHidden = false
+                toggleButtons(isStart: false)
             }else {
-                startButton.isHidden = true
+                toggleButtons(isStart: true)
             }
         }
     }
