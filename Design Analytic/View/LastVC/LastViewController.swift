@@ -12,7 +12,7 @@ class LastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Thank you"
+//        title = "Thank you"
     }
 
 }
