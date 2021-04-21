@@ -29,7 +29,7 @@ class SelectColorCollectionViewCell: UICollectionViewCell {
         
         if item.isSelected {
             layer.borderWidth = 5
-            layer.borderColor = #colorLiteral(red: 0.457952261, green: 0.756100595, blue: 0.9222099185, alpha: 1)
+            layer.borderColor = UIColor(named: "Accent")?.cgColor
         }else {
             layer.borderWidth = 0
             layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)

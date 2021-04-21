@@ -16,10 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        UINavigationBar.appearance().tintColor = UIColor(named: "Accent")
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
-//        let smartlookConfig = Smartlook.SetupConfiguration(key: "5eb7e6276ef2abe10cbcdb887ed3bc15462092a8")
-//          Smartlook.setupAndStartRecording(configuration: smartlookConfig)
+        let smartlookConfig = Smartlook.SetupConfiguration(key: "5eb7e6276ef2abe10cbcdb887ed3bc15462092a8")
+          Smartlook.setupAndStartRecording(configuration: smartlookConfig)
         
         return true
     }

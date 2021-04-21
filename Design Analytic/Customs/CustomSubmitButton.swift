@@ -27,6 +27,6 @@ class CustomSubmitButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
         layer.cornerRadius = 10
         setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        backgroundColor = UIColor(named: "Accent")
     }
 }

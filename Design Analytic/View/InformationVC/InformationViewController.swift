@@ -40,6 +40,7 @@ class InformationViewController: UIViewController, Alert {
         
         ageView.titleLabel.text = "Age"
         ageView.textFieldInput.placeholder = "Age"
+        ageView.textFieldInput.keyboardType = .numberPad
         
         locationView.titleLabel.text = "Location"
         locationView.textFieldInput.placeholder = "Location"

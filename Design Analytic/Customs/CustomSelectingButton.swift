@@ -15,7 +15,7 @@ class CustomSelectingButton: UIButton {
                 setIsChecked(titleColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), borderColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), borderWidth: 1)
                 
             }else {
-                setIsChecked(titleColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), borderColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), borderWidth: 2)
+                setIsChecked(titleColor: UIColor(named: "Accent")!, borderColor: UIColor(named: "Accent")!, borderWidth: 2)
             }
         }
     }
