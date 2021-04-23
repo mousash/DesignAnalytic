@@ -60,7 +60,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-Xw-lPa">
-                    <rect key="frame" x="32" y="368" width="350" height="50"/>
+                    <rect key="frame" x="32" y="360" width="350" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-VB-NN6" customClass="CustomSelectingButton" customModule="Design_Analytic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="10" width="106" height="30"/>
@@ -89,7 +89,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-jC-vt2" customClass="CustomSubmitButton" customModule="Design_Analytic" customModuleProvider="target">
-                    <rect key="frame" x="32" y="482" width="350" height="45"/>
+                    <rect key="frame" x="32" y="434" width="350" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Zxf-ua-mpQ"/>
                     </constraints>
@@ -103,12 +103,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="a9o-Xw-lPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="0YY-AN-BN6"/>
-                <constraint firstItem="a9o-Xw-lPa" firstAttribute="top" secondItem="dTN-H2-aAP" secondAttribute="bottom" constant="16" id="3un-Of-gPf"/>
+                <constraint firstItem="a9o-Xw-lPa" firstAttribute="top" secondItem="dTN-H2-aAP" secondAttribute="bottom" constant="8" id="3un-Of-gPf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iSg-jC-vt2" secondAttribute="trailing" constant="32" id="MxG-Gn-qOR"/>
                 <constraint firstItem="dTN-H2-aAP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NJk-fd-fLw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dTN-H2-aAP" secondAttribute="trailing" constant="16" id="Obj-9M-HsL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xsV-ys-DAk" secondAttribute="trailing" constant="16" id="PSE-on-35W"/>
-                <constraint firstItem="iSg-jC-vt2" firstAttribute="top" secondItem="a9o-Xw-lPa" secondAttribute="bottom" constant="64" id="XvQ-G7-7aK"/>
+                <constraint firstItem="iSg-jC-vt2" firstAttribute="top" secondItem="a9o-Xw-lPa" secondAttribute="bottom" constant="24" id="XvQ-G7-7aK"/>
                 <constraint firstItem="xsV-ys-DAk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Zs9-b9-Tvr"/>
                 <constraint firstItem="xsV-ys-DAk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="bzw-ru-5g1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a9o-Xw-lPa" secondAttribute="trailing" constant="32" id="eK3-ox-Qu3"/>
@@ -120,7 +120,7 @@
     </objects>
     <resources>
         <namedColor name="Accent">
-            <color red="0.94772265314244897" green="0.67031493195060154" blue="0.16720857587801355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94800001382827759" green="0.67000001668930054" blue="0.16699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

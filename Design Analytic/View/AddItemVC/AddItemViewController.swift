@@ -69,7 +69,11 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
     }
     
     private func setupAddButton() {
-        addBarButtonItem = UIBarButtonItem(image: .add, style: .done, target: self, action: #selector(addItemButtonAction))
+        if #available(iOS 13.0, *) {
+            addBarButtonItem = UIBarButtonItem(image: .add, style: .done, target: self, action: #selector(addItemButtonAction))
+        } else {
+            addBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addItemButtonAction))
+        }
             self.navigationItem.rightBarButtonItem  = addBarButtonItem
     }
     
@@ -101,7 +105,7 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
     func userDidBack() {
         isEditable = true
         pageTitle = "Move it"
-        pageDescription = "Move the Parrot to the top of the list"
+        pageDescription = "Move the last item to the top of the list"
     }
     
 }

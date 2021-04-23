@@ -29,9 +29,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-og-7NH" customClass="CustomSubmitButton" customModule="Design_Analytic" customModuleProvider="target">
-                    <rect key="frame" x="32" y="817" width="350" height="45"/>
+                    <rect key="frame" x="32" y="787" width="350" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="oVZ-Ya-EpB"/>
+                        <constraint firstAttribute="height" constant="45" id="qP4-8D-drM"/>
                     </constraints>
                     <state key="normal" title="Next"/>
                     <connections>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-y4-oVT">
-                    <rect key="frame" x="0.0" y="108" width="414" height="693"/>
+                    <rect key="frame" x="0.0" y="108" width="414" height="663"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3gL-xm-VoX">
                         <size key="itemSize" width="128" height="128"/>
@@ -52,23 +52,25 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Nta-y4-oVT" firstAttribute="top" secondItem="W6q-WJ-WNT" secondAttribute="bottom" constant="32" id="Fsh-fX-3xo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Qg-og-7NH" secondAttribute="trailing" constant="32" id="J1P-k1-8YZ"/>
-                <constraint firstItem="5Qg-og-7NH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="JIQ-Ou-Eiz"/>
-                <constraint firstAttribute="trailing" secondItem="W6q-WJ-WNT" secondAttribute="trailing" constant="16" id="K22-0Q-lRG"/>
-                <constraint firstItem="W6q-WJ-WNT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="XZK-Oq-iIk"/>
-                <constraint firstItem="5Qg-og-7NH" firstAttribute="top" secondItem="Nta-y4-oVT" secondAttribute="bottom" constant="16" id="bGb-RF-nBl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Qg-og-7NH" secondAttribute="bottom" id="fib-iZ-ym4"/>
-                <constraint firstItem="Nta-y4-oVT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hPt-g2-AbN"/>
-                <constraint firstItem="W6q-WJ-WNT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="jNX-kr-vY0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nta-y4-oVT" secondAttribute="trailing" id="mbI-1g-tMv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Qg-og-7NH" secondAttribute="trailing" constant="32" id="Dvz-07-PTj"/>
+                <constraint firstAttribute="trailing" secondItem="W6q-WJ-WNT" secondAttribute="trailing" constant="16" id="Jxs-94-IZv"/>
+                <constraint firstItem="5Qg-og-7NH" firstAttribute="top" secondItem="Nta-y4-oVT" secondAttribute="bottom" constant="16" id="Lci-A3-AU2"/>
+                <constraint firstItem="5Qg-og-7NH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Lke-fO-dSe"/>
+                <constraint firstItem="5Qg-og-7NH" firstAttribute="top" secondItem="Nta-y4-oVT" secondAttribute="bottom" constant="16" id="RGn-mF-8OB"/>
+                <constraint firstItem="Nta-y4-oVT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YXK-6R-Gjy"/>
+                <constraint firstItem="Nta-y4-oVT" firstAttribute="top" secondItem="W6q-WJ-WNT" secondAttribute="bottom" constant="32" id="Yc4-sw-i0B"/>
+                <constraint firstItem="Nta-y4-oVT" firstAttribute="top" secondItem="W6q-WJ-WNT" secondAttribute="bottom" constant="32" id="hyq-6G-BQa"/>
+                <constraint firstItem="W6q-WJ-WNT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="j5P-Gc-SMF"/>
+                <constraint firstAttribute="bottom" secondItem="5Qg-og-7NH" secondAttribute="bottom" constant="64" id="jhe-MK-5xx"/>
+                <constraint firstItem="W6q-WJ-WNT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="nAO-Wx-SqV"/>
+                <constraint firstItem="Nta-y4-oVT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oRz-AO-VUO"/>
             </constraints>
             <point key="canvasLocation" x="114" y="83"/>
         </view>
     </objects>
     <resources>
         <namedColor name="Accent">
-            <color red="0.94772265314244897" green="0.67031493195060154" blue="0.16720857587801355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94800001382827759" green="0.67000001668930054" blue="0.16699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

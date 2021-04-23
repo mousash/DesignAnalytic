@@ -29,12 +29,18 @@ class SelectColorsViewController: UIViewController {
     }
     
     private func setTitleText() {
-        titleLabel.text = "Please select two colors from below"
+        titleLabel.text = "Please select two items from below"
     }
 
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
-        navigationController?.pushViewController(vc, animated: true)
+        if viewModel.isColoreItems {
+            let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
+            navigationController?.pushViewController(vc, animated: true)
+        }else {
+            let vc = SelectColorsViewController()
+            vc.viewModel.isColoreItems = true
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
@@ -43,23 +49,23 @@ extension SelectColorsViewController: UICollectionViewDelegate,  UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
-        return CGSize(width: (collectionView.frame.width / 2) - 45, height: 100.0)
+        return CGSize(width: (collectionView.frame.width / 2) - 25, height: 100.0)
         }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.items.count
+        return viewModel.getItems().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectColorCollectionViewCell.reuseIdentifier, for: indexPath) as? SelectColorCollectionViewCell else { fatalError() }
         
-        cell.item = viewModel.items[indexPath.item]
+            cell.item = viewModel.getItems()[indexPath.item]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.items[indexPath.item].isSelected.toggle()
+        viewModel.toggleItem(index: indexPath.item)
         collectionView.reloadData()
         
     }

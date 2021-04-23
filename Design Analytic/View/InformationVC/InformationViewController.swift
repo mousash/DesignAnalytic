@@ -35,6 +35,8 @@ class InformationViewController: UIViewController, Alert {
     }
     
     private func setupView() {
+        welcomeLabel.text = "It is not mandatory to fill out the information, but if you do it will help me"
+        
         nameView.titleLabel.text = "Name"
         nameView.textFieldInput.placeholder = "Name"
         
@@ -42,8 +44,8 @@ class InformationViewController: UIViewController, Alert {
         ageView.textFieldInput.placeholder = "Age"
         ageView.textFieldInput.keyboardType = .numberPad
         
-        locationView.titleLabel.text = "Location"
-        locationView.textFieldInput.placeholder = "Location"
+        locationView.titleLabel.text = "City"
+        locationView.textFieldInput.placeholder = "City"
         
         maleButton.setTitle("Male", for: .normal)
         femaleButton.setTitle("Female", for: .normal)
@@ -59,10 +61,10 @@ class InformationViewController: UIViewController, Alert {
     }
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        if nameView.textFieldInput.text! == "" || ageView.textFieldInput.text! == "" || locationView.textFieldInput.text! == "" {
-                setAlert(title: "Something is wrong", message: "please fill out all the informations")
-                return
-        }
+//        if nameView.textFieldInput.text! == "" || ageView.textFieldInput.text! == "" || locationView.textFieldInput.text! == "" {
+//                setAlert(title: "Something is wrong", message: "please fill out all the informations")
+//                return
+//        }
         saveUserInformation()
         goToNextVC()
     }
