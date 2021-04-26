@@ -121,8 +121,6 @@ extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
         let itemCell: UITableViewCell = {
             guard let itemCell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell(style: .default, reuseIdentifier: "cell")
@@ -154,7 +152,7 @@ extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 150
+        return 50
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
