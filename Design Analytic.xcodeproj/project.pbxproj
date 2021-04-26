@@ -15,6 +15,8 @@
 		943724A42615C6C700A91093 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943724A22615C6C600A91093 /* AddItemViewController.swift */; };
 		943724A52615C6C700A91093 /* AddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943724A32615C6C600A91093 /* AddItemViewController.xib */; };
 		943724A82615C74400A91093 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943724A72615C74400A91093 /* AddItemViewModel.swift */; };
+		943AE60E263737B600FCF798 /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943AE60C263737B600FCF798 /* AddTableViewCell.swift */; };
+		943AE60F263737B600FCF798 /* AddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943AE60D263737B600FCF798 /* AddTableViewCell.xib */; };
 		943F4130261F518A0084DD9E /* SelectColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F412E261F518A0084DD9E /* SelectColorsViewController.swift */; };
 		943F4131261F518A0084DD9E /* SelectColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943F412F261F518A0084DD9E /* SelectColorsViewController.xib */; };
 		943F4135261F523D0084DD9E /* SelectColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F4133261F523D0084DD9E /* SelectColorCollectionViewCell.swift */; };
@@ -57,6 +59,8 @@
 		943724A22615C6C600A91093 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		943724A32615C6C600A91093 /* AddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemViewController.xib; sourceTree = "<group>"; };
 		943724A72615C74400A91093 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		943AE60C263737B600FCF798 /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
+		943AE60D263737B600FCF798 /* AddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTableViewCell.xib; sourceTree = "<group>"; };
 		943F412E261F518A0084DD9E /* SelectColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColorsViewController.swift; sourceTree = "<group>"; };
 		943F412F261F518A0084DD9E /* SelectColorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectColorsViewController.xib; sourceTree = "<group>"; };
 		943F4133261F523D0084DD9E /* SelectColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 			children = (
 				943724A22615C6C600A91093 /* AddItemViewController.swift */,
 				943724A32615C6C600A91093 /* AddItemViewController.xib */,
+				943AE60C263737B600FCF798 /* AddTableViewCell.swift */,
+				943AE60D263737B600FCF798 /* AddTableViewCell.xib */,
 			);
 			path = AddItemVC;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				943724932614E32C00A91093 /* GoogleService-Info.plist in Resources */,
 				9452A10326139768008F804E /* WelcomeViewController.xib in Resources */,
 				9452A0ED261391B8008F804E /* Assets.xcassets in Resources */,
+				943AE60F263737B600FCF798 /* AddTableViewCell.xib in Resources */,
 				9452A0EB261391B5008F804E /* Main.storyboard in Resources */,
 				94D26A5B262484F200735531 /* GoBackViewController.xib in Resources */,
 				94A9AAC726147F1100A11FF6 /* Colors.xcassets in Resources */,
@@ -450,6 +457,7 @@
 				943724A82615C74400A91093 /* AddItemViewModel.swift in Sources */,
 				9452A10C2613A2CC008F804E /* WelcomeModel.swift in Sources */,
 				943724A42615C6C700A91093 /* AddItemViewController.swift in Sources */,
+				943AE60E263737B600FCF798 /* AddTableViewCell.swift in Sources */,
 				94A9AAA7261473B500A11FF6 /* InformationViewController.swift in Sources */,
 				94A9AAB62614754800A11FF6 /* InformationViewModel.swift in Sources */,
 			);

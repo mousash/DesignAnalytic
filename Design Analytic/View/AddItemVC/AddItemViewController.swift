@@ -56,6 +56,7 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: AddTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: AddTableViewCell.reuseIdentifier)
     }
     
     private func setupEditableTableView() {
@@ -78,6 +79,10 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
     }
     
     @objc private func addItemButtonAction() {
+        addItem()
+    }
+    
+    private func addItem() {
         viewModel.addToSeenItems()
         tableView.reloadData()
         if viewModel.getItemsToBeSeen() == viewModel.items.count {
@@ -112,18 +117,29 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
 
 extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getItemsToBeSeen()
+        return viewModel.getItemsToBeSeen() + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell(style: .default, reuseIdentifier: "cell")
+        
+        var cell: UITableViewCell
+        
+        if indexPath.row == viewModel.getItemsToBeSeen() {
+            let addCell = tableView.dequeueReusableCell(withIdentifier: AddTableViewCell.reuseIdentifier, for: indexPath) as! AddTableViewCell
+            addCell.addButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
+            cell = addCell
+        }else {
+            let itemCell: UITableViewCell = {
+                guard let itemCell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell(style: .default, reuseIdentifier: "cell")
                 }
-                return cell
-            }()
-            
-        cell.textLabel?.text = viewModel.items[indexPath.row]
+                    return itemCell
+                }()
+                
+            itemCell.textLabel?.text = viewModel.items[indexPath.row]
+            cell = itemCell
+        }
+
         return cell
     }
     
@@ -139,5 +155,9 @@ extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
         let movedObject = viewModel.items[sourceIndexPath.row]
         viewModel.items.remove(at: sourceIndexPath.row)
         viewModel.items.insert(movedObject, at: destinationIndexPath.row)
+    }
+    
+    @objc func addButtonAction() {
+        addItem()
     }
 }

@@ -33,8 +33,8 @@
                     <color key="textColor" name="Accent"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dTN-H2-aAP">
-                    <rect key="frame" x="16" y="108" width="382" height="244"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dTN-H2-aAP">
+                    <rect key="frame" x="16" y="108" width="382" height="212"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDH-5s-4lX" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
@@ -44,14 +44,14 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-zA-2kv" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="92" width="382" height="60"/>
+                            <rect key="frame" x="0.0" y="76" width="382" height="60"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="aFu-7c-8Rl"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-l1-eZp" customClass="InformationInputView" customModule="Design_Analytic" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="184" width="382" height="60"/>
+                            <rect key="frame" x="0.0" y="152" width="382" height="60"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="PL7-DD-9j0"/>
@@ -60,7 +60,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-Xw-lPa">
-                    <rect key="frame" x="32" y="360" width="350" height="50"/>
+                    <rect key="frame" x="32" y="328" width="350" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-VB-NN6" customClass="CustomSelectingButton" customModule="Design_Analytic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="10" width="106" height="30"/>
@@ -89,7 +89,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-jC-vt2" customClass="CustomSubmitButton" customModule="Design_Analytic" customModuleProvider="target">
-                    <rect key="frame" x="32" y="434" width="350" height="45"/>
+                    <rect key="frame" x="32" y="402" width="350" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Zxf-ua-mpQ"/>
                     </constraints>
