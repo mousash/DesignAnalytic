@@ -12,7 +12,7 @@ protocol DataEnteredFromGoBackDelegate: class {
 }
 
 class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Alert {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var addBarButtonItem = UIBarButtonItem()
@@ -75,7 +75,7 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
         } else {
             addBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addItemButtonAction))
         }
-            self.navigationItem.rightBarButtonItem  = addBarButtonItem
+        self.navigationItem.rightBarButtonItem  = addBarButtonItem
     }
     
     @objc private func addItemButtonAction() {
@@ -117,36 +117,50 @@ class AddItemViewController: UIViewController, DataEnteredFromGoBackDelegate, Al
 
 extension AddItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getItemsToBeSeen() + 1
+        return viewModel.getItemsToBeSeen()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell
         
-        if indexPath.row == viewModel.getItemsToBeSeen() {
-            let addCell = tableView.dequeueReusableCell(withIdentifier: AddTableViewCell.reuseIdentifier, for: indexPath) as! AddTableViewCell
-            addCell.addButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
-            cell = addCell
-        }else {
-            let itemCell: UITableViewCell = {
-                guard let itemCell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                    return UITableViewCell(style: .default, reuseIdentifier: "cell")
-                }
-                    return itemCell
-                }()
-                
-            itemCell.textLabel?.text = viewModel.items[indexPath.row]
-            cell = itemCell
-        }
-
-        return cell
+        let itemCell: UITableViewCell = {
+            guard let itemCell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                return UITableViewCell(style: .default, reuseIdentifier: "cell")
+            }
+            return itemCell
+        }()
+        
+        itemCell.textLabel?.text = viewModel.items[indexPath.row]
+        
+        return itemCell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        let button = UIButton()
+        customView.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.centerXAnchor.constraint(equalTo: customView.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: customView.centerYAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: customView.safeAreaLayoutGuide.leadingAnchor, constant: 32).isActive = true
+        button.trailingAnchor.constraint(equalTo: customView.safeAreaLayoutGuide.trailingAnchor, constant: -32).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        button.setTitle("Add an animal", for: .normal)
+        button.backgroundColor = UIColor(named: "Accent")
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
+        
+        return customView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 150
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
-
+    
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
     }
