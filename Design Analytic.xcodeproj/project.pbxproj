@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940C96B626380590002D0B03 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C96B526380590002D0B03 /* RootView.swift */; };
 		942B5BB02614861A002B27D3 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B5BAF2614861A002B27D3 /* Extension+UIView.swift */; };
 		942B5BB3261487DB002B27D3 /* CustomSelectingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B5BB2261487DB002B27D3 /* CustomSelectingButton.swift */; };
 		942B5BB7261490BE002B27D3 /* CustomSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B5BB6261490BE002B27D3 /* CustomSubmitButton.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		697B3CE862B9CAF772227DB6 /* Pods_Design_Analytic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Design_Analytic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		940C96B526380590002D0B03 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		942B5BAF2614861A002B27D3 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		942B5BB2261487DB002B27D3 /* CustomSelectingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectingButton.swift; sourceTree = "<group>"; };
 		942B5BB6261490BE002B27D3 /* CustomSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubmitButton.swift; sourceTree = "<group>"; };
@@ -115,6 +117,15 @@
 				B5FCC69BCA546D964A81BE39 /* Pods-Design Analytic.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		940C96B326380527002D0B03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				942B5BAF2614861A002B27D3 /* Extension+UIView.swift */,
+				9484E3BB262749DF0089ECE8 /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		943724AA2615CDD100A91093 /* WelcomVC */ = {
@@ -183,12 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				943724922614E32C00A91093 /* GoogleService-Info.plist */,
-				942B5BAF2614861A002B27D3 /* Extension+UIView.swift */,
-				9484E3BB262749DF0089ECE8 /* UIViewController+Alert.swift */,
+				940C96B326380527002D0B03 /* Extensions */,
 				94D26A5F262706D700735531 /* Customs */,
 				94A9AAAF261474C600A11FF6 /* Model */,
 				94A9AAAE261474C000A11FF6 /* View */,
 				94A9AAAD261474B500A11FF6 /* ViewModel */,
+				940C96B526380590002D0B03 /* RootView.swift */,
 				9452A0E3261391B5008F804E /* AppDelegate.swift */,
 				9452A0E5261391B5008F804E /* SceneDelegate.swift */,
 				9452A0E9261391B5008F804E /* Main.storyboard */,
@@ -460,6 +471,7 @@
 				943AE60E263737B600FCF798 /* AddTableViewCell.swift in Sources */,
 				94A9AAA7261473B500A11FF6 /* InformationViewController.swift in Sources */,
 				94A9AAB62614754800A11FF6 /* InformationViewModel.swift in Sources */,
+				940C96B626380590002D0B03 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

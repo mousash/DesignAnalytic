@@ -16,31 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+        let vc = RootView().setupRootView()//WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 
-    private func setupInitView() -> UIViewController {
-        let pageStep = UserDefaults.standard.string(forKey: "PageStep")
-        switch pageStep {
-        case PageStep.UserInformation.rawValue :
-            let vc = InformationViewController(nibName: "InformationViewController", bundle: nil)
-            return UINavigationController(rootViewController: vc)
-        case PageStep.SelectColor.rawValue :
-            let vc = SelectColorsViewController(nibName: "SelectColorsViewController", bundle: nil)
-            return UINavigationController(rootViewController: vc)
-        case PageStep.AddItem.rawValue :
-            let vc = AddItemViewController(isEditable: false, pageTitle: "Add an item", pageDescription: "try to add a new row to this animal list please")
-            return UINavigationController(rootViewController: vc)
-        case PageStep.Last.rawValue :
-            let vc = LastViewController(nibName: "LastViewController", bundle: nil)
-            return UINavigationController(rootViewController: vc)
-        default:
-            return WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
-        }
-    }
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
