@@ -13,12 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let vc = RootView().setupRootView()//WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+        let vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

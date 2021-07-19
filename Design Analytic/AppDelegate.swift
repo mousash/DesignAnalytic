@@ -21,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor(named: "Accent")
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
-//        let smartlookConfig = Smartlook.SetupConfiguration(key: "5eb7e6276ef2abe10cbcdb887ed3bc15462092a8")
-//          Smartlook.setupAndStartRecording(configuration: smartlookConfig)
+        let smartlookConfig = Smartlook.SetupConfiguration(key: "5eb7e6276ef2abe10cbcdb887ed3bc15462092a8")
+          Smartlook.setupAndStartRecording(configuration: smartlookConfig)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = RootView().setupRootView()//UINavigationController(rootViewController: WelcomeViewController(nibName: "WelcomeViewController", bundle: nil))
+        let vc = UINavigationController(rootViewController: WelcomeViewController(nibName: "WelcomeViewController", bundle: nil))
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         

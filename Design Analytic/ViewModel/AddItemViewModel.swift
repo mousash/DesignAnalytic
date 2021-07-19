@@ -21,7 +21,9 @@ class AddItemViewModel {
     }
     
     func addToSeenItems() {
-        seenItems += 1
+        if seenItems < 6 {
+            seenItems += 1
+        }
     }
     
     func getUserName() -> String {
